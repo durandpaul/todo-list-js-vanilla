@@ -37,40 +37,58 @@ nav ul {
     flex-direction: row;
 }
 
-#todo-form {
+#todo__form {
     padding-left: 20px;
     width: 50%;
 }
-
-.todo__delete-cross {
-    width: 20px;
-} 
 
 #todo__list > li, .nav__show-deleted-todo > li {
     cursor: pointer;
 }
 
-.todo__to-complete {
-    text-decoration: none;
+#todo__list {
+    padding-left: 0;
+    width: 70%;
 }
 
+.todo__to-complete {
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: azure;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.todo__delete-cross {
+    width: 10px;
+    float: right;
+    margin: 4px;
+} 
+
 .todo__complete {
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: rgb(119, 124, 124);
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
     text-decoration: line-through;
 }
 
 #todo__delete-list {
-    display: none;
     width: 50%;
-    
 }
 
 #todo__delete-list > ul {
-    background-color: #1c1c1c;
+    background-color: #282828;
+    /* opacity: 0.5; */
+    display: none;
     color: red;
     min-height: 100px;
     margin-top: 0;
-    /* padding-top: 15px;
-    padding-left: 0; */
     padding: 10px 0px 10px;
     text-align: center;
 }
@@ -78,4 +96,6 @@ nav ul {
 
 #todo__delete-list > ul > li {
     padding: inherit;
+    margin-left: 10px;
+    margin-right: 10px;
 }
