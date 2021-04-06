@@ -4,15 +4,7 @@ body {
     align-items: center;
 }
 
-#main-container {
-    width: 900px;
-    margin: auto;
-}
-
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
     background-color: black;
     color: aliceblue;
@@ -37,10 +29,10 @@ nav ul {
     flex-direction: row;
 }
 
-#todo__form {
-    padding-left: 20px;
-    width: 50%;
+#form > input, #todo__list > li  {
+    font-size:large;
 }
+
 
 #todo__list > li, .nav__show-deleted-todo > li {
     cursor: pointer;
@@ -48,7 +40,6 @@ nav ul {
 
 #todo__list {
     padding-left: 0;
-    width: 70%;
 }
 
 .todo__to-complete {
@@ -78,13 +69,8 @@ nav ul {
     text-decoration: line-through;
 }
 
-#todo__delete-list {
-    width: 50%;
-}
-
 #todo__delete-list > ul {
     background-color: #282828;
-    /* opacity: 0.5; */
     display: none;
     color: red;
     min-height: 100px;
@@ -93,9 +79,68 @@ nav ul {
     text-align: center;
 }
 
-
 #todo__delete-list > ul > li {
     padding: inherit;
     margin-left: 10px;
     margin-right: 10px;
+    display: inline-block;
+    word-break: break-all; /* wrap extended text*/
+
+}
+
+@media all and (min-width: 801px) {
+
+    #main-container {
+        width: 900px;
+        margin: auto;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #todo {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #todo__form {
+        padding-left: 20px;
+        width: 60%;
+    }
+
+    #todo__delete-list {
+        width: 40%;
+    }
+
+    #todo__list {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 800px) {
+
+    #main-container {
+        margin: auto;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #todo {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #todo__form {
+        padding-left: 20px;
+    }
+
+    #todo__list {
+        width: 90%;
+    }
 }
